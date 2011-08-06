@@ -1,0 +1,9 @@
+Description:
+    The custom_layout generator creates a nice html5 layout.
+    It replaces the existing default layout build by the scaffold generator.
+
+Example:
+    rails generate custom_layout
+
+    This will create:
+        app/views/layouts/application.html.erb
