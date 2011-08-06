@@ -1,0 +1,15 @@
+= Custom Layout Generator
+
+Rails generator scripts for layout files
+
+== Setup
+
+=== Rails 3
+
+Add the gem to your Gemfile.
+
+  gem "custom_layout", :group => :development
+
+Then you can run the generator.
+
+  rails g custom_layout
