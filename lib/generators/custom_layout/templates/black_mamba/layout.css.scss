@@ -2,30 +2,34 @@ html {
   overflow-y: scroll; 
 }
 body {
-    color:; #111111;
-    font-family: helvetica,arial,sans-serif;
+    color: #111111;
     background: url("../images/bg.gif") repeat scroll 0 0 #EBEBEB;
 }
 
 header {
+    font-family: helvetica,arial,sans-serif;
     background: #333;
     padding: 0 20px;
     min-width: 960px;
     nav {
         float: right;
         width: 100%;
-        text-align:right;
+        text-align: right;
         ul {
             list-style-type: none;
-            margin: 0;
+            margin: 7px 0 0;
             padding: 0;
             li {
                 padding: 0;
+                display :inline;
                 a {
                     color: #FFFFFF;
                     padding: 10px;
                     text-decoration: none;
                     font-size: 12px;
+                }
+                a:hover {
+                    text-decoration: underline;
                 }
             }
         }

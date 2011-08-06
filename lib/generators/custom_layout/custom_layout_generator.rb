@@ -1,5 +1,7 @@
-class CustomLayoutGenerator < Rails::Generators::NamedBase
-  source_root File.expand_path('../templates', __FILE__)
+class CustomLayoutGenerator < Rails::Generators::Base  
+  source_root File.expand_path('../templates', __FILE__)  
+  argument :theme, :type => :string, :default => "black_mamba"
+
     
   def remove_existing_layout
     remove_file 'app/views/layouts/application.html.erb'
@@ -8,10 +10,11 @@ class CustomLayoutGenerator < Rails::Generators::NamedBase
   end
   
   def create_new_layout
-    template "layout.html.erb", "app/views/layouts/application.html.erb"
-    template "reset.css.erb", "app/assets/stylesheets/reset.css"
-    template "print.css.erb", "app/assets/stylesheets/print.css"
-    template "layout.css.scss.erb", "app/assets/stylesheets/layout.css.scss"
-    template "bg.gif", "app/assets/images/bg.gif"
+    template "#{theme}/layout.html.erb", "app/views/layouts/application.html.erb"
+    copy_file "#{theme}/reset.css", "app/assets/stylesheets/reset.css"
+    copy_file "#{theme}/print.css", "app/assets/stylesheets/print.css"
+    copy_file "#{theme}/application.css", "app/assets/stylesheets/application.css"
+    copy_file "#{theme}/layout.css.scss", "app/assets/stylesheets/layout.css.scss"
+    template "#{theme}/bg.gif", "app/assets/images/bg.gif"
   end
 end

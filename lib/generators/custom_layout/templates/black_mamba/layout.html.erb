@@ -18,19 +18,37 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <script src="assets/modernizr-1.7.min.js"></script>
+    <%%= csrf_meta_tag %>  
   </head>
 <body>
   <header>
     <nav>
+      <ul>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">logout</a></li>
+      </ul>
     </nav>
+    <div id="msg" class="notice">
+        <h4>Some messages to read</h4>
+        <ul>
+            <li>consectetur <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+    </div>
+    <h1>Title</h1>
   </header>
-  <div class="container">
-    <%%= yield %>
-    <div id="maincol"></div>
-    <div id="subcol"></div>
+  <div id="container">
+    <div id="maincol">
+      <%%= yield %>
+    </div>
+    <div id="subcol">
+      <%%= yield :subcol %>
+    </div>
   </container>
   <footer>
   </footer>
+  <%%= javascript_include_tag :defaults %>  
   
   <!-- Change UA-XXXXX-X to be your site's ID -->
   <script>
