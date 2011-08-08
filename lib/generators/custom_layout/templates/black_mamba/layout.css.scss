@@ -3,18 +3,18 @@ html {
 }
 body {
     color: #111111;
-    background: url("../images/bg.gif") repeat scroll 0 0 #EBEBEB;
+    background: url("/assets/bg.gif") repeat scroll 0 0 #EBEBEB;
 }
 
 header {
     font-family: helvetica,arial,sans-serif;
     background: #333;
-    padding: 0 20px;
     min-width: 960px;
+    width: 100%;
     nav {
         float: right;
-        width: 100%;
         text-align: right;
+        margin: 0 20px 0 0;
         ul {
             list-style-type: none;
             margin: 7px 0 0;
@@ -42,9 +42,10 @@ header {
         border-top: 1px solid rgba(0, 0, 0, 0.2);
         border-left: 1px solid rgba(0, 0, 0, 0.2);
         font-size: 14px;
+        border-top-left-radius: 9px;
         h4 {
             font-weight: bold;
-            font-size: 16   px;
+            font-size: 16px;
             margin: 0 0 10px 0;
         }
         li {
@@ -70,7 +71,7 @@ header {
         font-weight: bold;
         letter-spacing: -1px;
         line-height: 1.2em;
-        padding: 15px 0;
+        padding: 15px 0 10px 20px;
         text-shadow: 1px 1px 2px #000000;
         text-transform: none;
     }
@@ -85,11 +86,12 @@ header {
         width: 71%;
         float: left;
         background: #fff;
+        padding: 20px;
         h3 {
             background-color: #F1F8FE;
             border-bottom: 1px solid #DADEE5;
             border-top: 1px solid #DADEE5;
-            margin: 0;
+            margin: -20px -20px 20px -20px;
             padding: 15px 20px;
             font-size: 22px;
             font-style: normal;
@@ -98,7 +100,7 @@ header {
             line-height: 1.2em;
             text-transform: none;
         }
-        h3.first {
+        h3 {
             border-top: none;
             border-top-left-radius: 9px;
             border-top-right-radius: 9px;
@@ -110,30 +112,35 @@ header {
             padding-bottom: 2px;
         }
         div.field,  p {
-            margin: 12px 20px;
-        }
-        p {
+            margin: 12px 0;
             font-size: 14px;
             line-height: 15px;
+            float:left;
+            width:100%;
+            input, textarea {
+                border: 1px solid #E2E2E2;
+                width: 100%;
+                font-size: 1.0em;
+            }
+            input:hover, textarea:hover {
+                border: 1px solid #A2A294;
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+            }
+            span.desc {
+                color: #8C8C8C;
+                font-size: 0.7em;
+                font-style: italic;
+            }
         }
-        input, textarea {
-            border: 1px solid #E2E2E2;
-            width: 100%;
-            font-size: 1.0em;
-        }
-        input:hover, textarea:hover {
-            border: 1px solid #A2A294;
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-        }
-        span.desc {
-            color: #8C8C8C;
-            font-size: 0.7em;
-            font-style: italic;
+        div.actions {
+            margin: 20px 0;
+            float:left;
+            width:100%;
         }
     }
     #subcol {
         float: right;
-        width: 25%;
+        width: 24%;
         .notice {
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
             border-radius: 9px 9px 9px 9px;
